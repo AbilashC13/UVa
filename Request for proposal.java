@@ -29,7 +29,7 @@ public class Main {
       System.out.println("RFP #" + rfp + '\n' + bestProposal);
       rfp++;
     }
-    s.close();
+    sc.close();
   }
 
 }
