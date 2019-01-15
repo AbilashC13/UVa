@@ -1,2 +1,0 @@
-# UVa 
-uva online judge
