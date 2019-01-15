@@ -3,23 +3,23 @@ import java.util.Scanner;
 public class Main {
 
   public static void main(String[] args) {
-    Scanner s = new Scanner(System.in);
+    Scanner sc= new Scanner(System.in);
     int rfp = 1;
  
     while (true) {
-      int n = s.nextInt(), p = s.nextInt(); s.nextLine();
+      int n = sc.nextInt(), p = sc.nextInt(); sc.nextLine();
       
       if (n == 0 && p == 0) break;
       if (rfp > 1) System.out.println();
-      for (int i=0;i < n; i++) s.nextLine();
+      for (int i=0;i < n; i++) sc.nextLine();
       String bestProposal = "";
       int bestProposalReqs = Integer.MIN_VALUE;
       double bestProposalPrice = Double.MAX_VALUE;
       for (int i =0; i < p; i++) {
-        String proponent = s.nextLine();
-        double price = s.nextDouble();
-        int reqs = s.nextInt(); s.nextLine();
-        for (int j=0;j < reqs; j++) s.nextLine();
+        String proponent = sc.nextLine();
+        double price = sc.nextDouble();
+        int reqs = sc.nextInt(); sc.nextLine();
+        for (int j=0;j < reqs; j++) sc.nextLine();
         if (reqs > bestProposalReqs || (reqs == bestProposalReqs && price < bestProposalPrice)) {
           bestProposal = proponent;
           bestProposalReqs = reqs;  
