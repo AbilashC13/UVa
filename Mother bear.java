@@ -6,10 +6,10 @@ class Main
 {
 public static void main (String[] args) throws IOException
 {
-	BufferedReader in=new BufferedReader(new InputStreamReader(System.in));
+	BufferedReader br=new BufferedReader(new InputStreamReader(System.in));
 	while(true)
 	{
-	    String str=in.readLine();
+	    String str=br.readLine();
 	    if(str.equals("DONE"))
 	    break;
 	    str = str.replaceAll("\\p{Punct}","");
