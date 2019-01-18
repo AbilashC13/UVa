@@ -13,7 +13,6 @@ for (int i =0; i<t ; i++) {
  if (i>0) bf.append("\n");
  char [] a =sc.nextLine().toCharArray();
  Arrays.sort(a);
- Arrays.asList(a);
  do{
   bf.append(new String(a)+"\n");
  }while(next_permutation2(a));
