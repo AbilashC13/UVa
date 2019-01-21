@@ -1,47 +1,39 @@
-/* package whatever; // don't place package name! */
-
-import java.util.*;
-import java.lang.*;
 import java.io.*;
+import java.util.*;
 
-/* Name of the class has to be "Main" only if the class is public. */
-class Main
-{
-	public static void main (String[] args) throws java.lang.Exception
-	{
-		// your code goes here
-		Scanner sc=new Scanner(System.in);
-		 int count=1;
-	while(sc.hasNext())
-	{  
-	   
-	    
-		String s=sc.next();
-		char[] c=s.toCharArray();
-		int n=sc.nextInt();
-		if(n==0)
-		   break;
-		 System.out.println("Case "+(count++)+":");
-		while(n-->0)
-		{   int c1=0,c2=0;
-			int a=sc.nextInt();
-			int b=sc.nextInt();
-			int min=Math.min(a,b);
-			int max=Math.max(a,b);
-			for(int i=min;i<=max;i++)
-			{
-				if(c[i]=='0')
-				  c1++;
-				else if(c[i]=='1')
-				  c2++;
-			}if(c1==max-min+1||c2==max-min+1)
-			{
-				System.out.println("Yes");
-			}
-			else
-			    System.out.println("No");
-		}
-		
-	}
+class Main{
+	public static void main (String[] args) {
+	    		Scanner in=new Scanner(System.in);
+	    		int co=1;
+	    		while(in.hasNext())
+	    		{
+	    		    String s=in.next();
+	    		    char []ss=s.toCharArray();
+	    		    int n=in.nextInt();
+	    		    System.out.println("Case "+(co++)+":");
+	    		    if(n==0)
+	    		    break;
+	    		    for(int i=0;i<n;i++)
+	    		    {
+	    		        int a=in.nextInt();
+	    		        int b=in.nextInt();
+	    		        int min=Math.min(a,b);
+	    		        int max=Math.max(a,b);
+	    		        int c1=0,c2=0;
+	    		        for(int j=min;j<=max;j++)
+	    		        {
+	    		            if(ss[j]=='0')
+	    		            c1++;
+	    		            else if(ss[j]=='1')
+	    		            c2++;
+	    		        }
+	    		        if(c1==max-min+1||c2==max-min+1)
+	    		        {
+	    		            System.out.println("Yes");
+	    		        }
+	    		        else
+	    		        System.out.println("No");
+	    		    }
+	    		}
 	}
 }
