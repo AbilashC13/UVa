@@ -26,7 +26,8 @@ class Main
 			    else if(a[i]>a[i+1])
 			     c2++;
 			}
-			System.out.println("Case "+tc+": "+c1+" "+c2);
+			int x=tc+1;
+			System.out.println("Case "+x+": "+c1+" "+c2);
 		}
 	}
 }
