@@ -11,14 +11,17 @@ class Main
 	{
 		// your code goes here
 		Scanner sc=new Scanner(System.in);
-		 int count=0;
+		 int count=1;
 	while(sc.hasNext())
 	{  
-	    count++;
-	    System.out.println("Case "+count+":");
+	   
+	    
 		String s=sc.next();
 		char[] c=s.toCharArray();
 		int n=sc.nextInt();
+		if(n==0)
+		   break;
+		 System.out.println("Case "+(count++)+":");
 		while(n-->0)
 		{   int c1=0,c2=0;
 			int a=sc.nextInt();
@@ -29,7 +32,7 @@ class Main
 			{
 				if(c[i]=='0')
 				  c1++;
-				if(c[i]=='1')
+				else if(c[i]=='1')
 				  c2++;
 			}if(c1==max-min+1||c2==max-min+1)
 			{
