@@ -21,20 +21,20 @@ class Main
     }
 	public static void main (String[] args)
 	{
-		Scanner in=new Scanner(System.in);
-		int t=in.nextInt();
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
 		int m=t;
 		while(t-->0)
 		{
-		    int n=in.nextInt(),j=0;
+		    int n=sc.nextInt(),j=0;
 		    int y=0;
 		    String s[]=new String[n];
 		    ArrayList<String>s2=new ArrayList<>();
 		    for(int i=0;i<n;i++)
-		    s[i]=in.next();
+		    s[i]=isc.next();
 		    String s1;
 		    
-		    while(!(s1=in.next()).equals("END"))
+		    while(!(s1=sc.next()).equals("END"))
 		    {
 		    s2.add(s1);
 		    j++;
