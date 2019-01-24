@@ -31,7 +31,7 @@ class Main
 		    String s[]=new String[n];
 		    ArrayList<String>s2=new ArrayList<>();
 		    for(int i=0;i<n;i++)
-		    s[i]=isc.next();
+		    s[i]=sc.next();
 		    String s1;
 		    
 		    while(!(s1=sc.next()).equals("END"))
