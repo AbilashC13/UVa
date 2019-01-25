@@ -1,20 +1,18 @@
-/* package whatever; // don't place package name! */
-
 import java.util.*;
 import java.lang.*;
 import java.io.*;
 
 /* Name of the class has to be "Main" only if the class is public. */
-class Ideone
+class Main
 {
 	public static void main (String[] args) throws java.lang.Exception
 	{
 		Scanner sc=new Scanner(System.in);
 		while(sc.hasNext())
 		{
-			String s=sc.next();
-			if(s=="#")
-			   break;
+			String s=sc.nextLine();
+		if(s.equals("#"))
+		   break;
 			char [] c =s.toCharArray();
 			if(next_permutation(c))
 			{
@@ -27,28 +25,26 @@ class Ideone
 		     	
 		}
 	}
-		public static boolean next_permutation(char a[])
-    {
-       for(int i = a.length-2, j; i >= 0; i--)
-       {
-        if (a[i+1] > a[i])
-               {
-                for(j = a.length-1; a[j] <= a[i]; j--);
-					 swap(a, i, j);
-    		    for(j = 1; j <= (a.length-i)/2; j++)
-    				 swap(a, i+j, a.length-j);
-              return true;
-               }
+		static boolean next_permutation(char[] p) {
+        for (int a = p.length - 2; a >= 0; --a) {
+            if (p[a] < p[a + 1]) {
+                for (int b = p.length - 1;; --b) {
+                    if (p[b] > p[a]) {
+                        char t = p[a];
+                        p[a] = p[b];
+                        p[b] = t;
+                        for (++a, b = p.length - 1; a < b; ++a, --b) {
+                            t = p[a];
+                            p[a] = p[b];
+                            p[b] = t;
+                        }
+                        return true;
+                    }
+                }
+            }
         }
-         return false;
-   }
+        return false;
+    }
 
-
- public static void swap(char a[], int i, int j)
- {
-  char temp = a[i];
-  a[i] = a[j];
-   a[j] = temp;
-      }
 	
 }
