@@ -1,32 +1,31 @@
-/* package whatever; // don't place package name! */
-
-import java.util.*;
-import java.lang.*;
+import java.util.PriorityQueue;
 import java.io.*;
-
-/* Name of the class has to be "Main" only if the class is public. */
-class Ideone
+import java.util.*;
+class Main 
 {
-	public static void main (String[] args) throws java.lang.Exception
-	{
-		// your code goes here
-		Scanner sc=new Scanner(System.in);
-		while(true)
-		{
-			int n=sc.nextInt();
-			if(n==0)
-			    break;
-			ArrayList<Integer> a=new ArrayList<Integer>(n);
-			for(int i=0;i<n;i++)
-			   a.add(sc.nextInt());
-			Collections.sort(a);
-			int c=a.get(0),c1=0;
-			for(int i=0;i<n-1;i++)
-			{
-				c=c+a.get(i+1);
-				c1+=c;
-			}
-			System.out.println(c1);
-		}
-	}
+    public static void main(String [] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        String s;
+        while(sc.hasNext())
+        {
+            int n=sc.nextInt();
+            if(n==0)
+                break;
+            PriorityQueue<Long> p=new PriorityQueue<Long>();
+            for(int i=0;i<n;i++)
+            {
+                p.offer(sc.nextLong());
+            }
+            long c=0;
+            while(!p.isEmpty() && n>1)
+            {
+                Long x=p.poll()+p.poll();
+                c=c+x;
+                p.offer(x);
+                n--;
+            }
+            System.out.println(c);
+        }
+    }
 }
