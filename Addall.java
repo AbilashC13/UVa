@@ -18,7 +18,7 @@ class Main
                 p.offer(sc.nextLong());
             }
             long c=0;
-            while(!p.isEmpty() && n>1)
+            while(!p.isEmpty()&&n>1)
             {
                 Long x=p.poll()+p.poll();
                 c=c+x;
