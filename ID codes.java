@@ -1,8 +1,6 @@
 import java.util.*;
 import java.lang.*;
 import java.io.*;
-
-/* Name of the class has to be "Main" only if the class is public. */
 class Main
 {
 	public static void main (String[] args) throws java.lang.Exception
@@ -25,18 +23,24 @@ class Main
 		     	
 		}
 	}
-		static boolean next_permutation(char[] p) {
-        for (int a = p.length - 2; a >= 0; --a) {
-            if (p[a] < p[a + 1]) {
-                for (int b = p.length - 1;; --b) {
-                    if (p[b] > p[a]) {
-                        char t = p[a];
-                        p[a] = p[b];
-                        p[b] = t;
-                        for (++a, b = p.length - 1; a < b; ++a, --b) {
-                            t = p[a];
-                            p[a] = p[b];
-                            p[b] = t;
+static boolean next_permutation(char[] p) 
+{
+        for (int a=p.length-2;a>=0;--a) 
+	{
+            if (p[a]<p[a+1]) 
+	    {
+                for (int b=p.length-1;;--b) 
+		{
+                    if (p[b]>p[a]) 
+		    {
+                        char t=p[a];
+                        p[a]=p[b];
+                        p[b]=t;
+                        for (++a,b=p.length-1;a<b;++a,--b) 
+			{
+                            t=p[a];
+                            p[a]=p[b];
+                            p[b]=t;
                         }
                         return true;
                     }
@@ -45,6 +49,4 @@ class Main
         }
         return false;
     }
-
-	
 }
