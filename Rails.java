@@ -5,14 +5,14 @@ class Main
 {
     public static void main (String[] args) 
     {
-        Scanner in=new Scanner(System.in);
-        while(in.hasNext())
+        Scanner sc=new Scanner(System.in);
+        while(sc.hasNext())
         {
-            int n=in.nextInt();
+            int n=sc.nextInt();
             if(n==0)
                 break;
-             boolean b=true;
-             while(b)
+             
+             while(true)
              {
                  Stack<Integer> s=new Stack<>();
                  int k=0;
@@ -21,7 +21,6 @@ class Main
                      int a=in.nextInt();
                      if(a==0)
                      {
-                         b=false;
                          break;
                      }
                      while(k<n && k!=a)
