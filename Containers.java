@@ -10,7 +10,7 @@ class Main
 	    int t=1;
 	    while(true)
 	    {
-	        String s=in.next();
+	        String s=sc.next();
 	        if(s.equals("end"))
 	            break;
             char a[]=new char[26];
