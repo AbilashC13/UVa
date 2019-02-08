@@ -6,7 +6,7 @@ class Main
 {
 	public static void main (String[] args) 
 	{
-	    Scanner in=new Scanner(System.in);
+	    Scanner sc=new Scanner(System.in);
 	    int t=1;
 	    while(true)
 	    {
