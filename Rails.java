@@ -1,3 +1,4 @@
+
 import java.io.*;
 import java.util.*;
 
@@ -11,16 +12,17 @@ class Main
             int n=sc.nextInt();
             if(n==0)
                 break;
-             
-             while(true)
+             boolean b=true;
+             while(b)
              {
                  Stack<Integer> s=new Stack<>();
                  int k=0;
                  for(int i=0;i<n;i++)
                  {
-                     int a=in.nextInt();
+                     int a=sc.nextInt();
                      if(a==0)
                      {
+                         b=false;
                          break;
                      }
                      while(k<n && k!=a)
