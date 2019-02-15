@@ -11,7 +11,7 @@ class Main
 	{
 		// your code goes here
 		Scanner sc=new Scanner(System.in);
-	    boolean time[]=new boolean[1000100];
+	    boolean time[]=new boolean[1000001];
 		for(;;)
 		{
 			int n=sc.nextInt();
