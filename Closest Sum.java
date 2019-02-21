@@ -46,7 +46,7 @@ class Main
 						val=al.get(j);
 					}
 				}
-				System.out.println("Closest sum to "+b[i]+" is "+val);
+				System.out.println("Closest sum to "+b[i]+" is "+val+".");
 			}
 		
 		}
