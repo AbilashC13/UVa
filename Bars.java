@@ -16,7 +16,7 @@ class Main
 		{
 		    int val=sc.nextInt();	
 		    int n=sc.nextInt();
-		    int a[]=new int[1005];
+		    int a[]=new int[1001];
 		    a[0]=1;
 		    for(int i=0;i<n;i++)
 		    {
